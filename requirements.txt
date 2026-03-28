@@ -1,0 +1,3 @@
+flask
+requests
+git+https://github.com/DonutByte/pylgate.git@main
