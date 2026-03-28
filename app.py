@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 
 SESSION_TOKEN = bytes.fromhex("149e9b790f31c6f68a7122bf2416b697")
-PHONE         = 33600000000
+PHONE         = 972557714994
 DEVICE        = "4G300208179"
 
 @app.route('/open')
