@@ -17,3 +17,5 @@ def open_gate():
         headers={'User-Agent': 'okhttp/4.9.3', 'X-Bt-Token': token}
     )
     return jsonify(r.json())
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
