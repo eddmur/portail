@@ -31,5 +31,15 @@ def open_gate_ami():
     )
     return jsonify(r.json())
 
+@app.route('/open_ami2')
+def open_gate_ami2():
+    token = generate_token(bytes.fromhex("15851636a1727c8a12c27174b399c1a8"), 972527241472, TokenType.SECONDARY)
+    r = requests.get(
+        f'https://api1.pal-es.com/v1/bt/device/4G300207898/open-gate?outputNum=1',
+        headers={'User-Agent': 'okhttp/4.9.3', 'X-Bt-Token': token}
+    )
+    return jsonify(r.json())
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
+10000)
