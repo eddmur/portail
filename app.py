@@ -26,7 +26,7 @@ def ping():
 def open_gate_ami():
     token = generate_token(bytes.fromhex("15851636a1727c8a12c27174b399c1a8"), 972527241472, TokenType.SECONDARY)
     r = requests.get(
-        f'https://api1.pal-es.com/v1/bt/device/4G600100641/open-gate?outputNum=1',
+        'https://api1.pal-es.com/v1/bt/device/4G600100641/open-gate?outputNum=1',
         headers={'User-Agent': 'okhttp/4.9.3', 'X-Bt-Token': token}
     )
     return jsonify(r.json())
@@ -35,7 +35,7 @@ def open_gate_ami():
 def open_gate_ami2():
     token = generate_token(bytes.fromhex("15851636a1727c8a12c27174b399c1a8"), 972527241472, TokenType.SECONDARY)
     r = requests.get(
-        f'https://api1.pal-es.com/v1/bt/device/4G300207898/open-gate?outputNum=1',
+        'https://api1.pal-es.com/v1/bt/device/4G300207898/open-gate?outputNum=1',
         headers={'User-Agent': 'okhttp/4.9.3', 'X-Bt-Token': token}
     )
     return jsonify(r.json())
